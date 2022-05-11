@@ -1,0 +1,290 @@
+:root {
+  --dark-color: #19283f;
+  --main-transition: 0.5s;
+  --main-color:  #20c997;
+}
+::selection {
+  background-color: var(--main-color);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #dddddd;
+  color: #4c4d4d;
+}
+ h2, h3, h4, h5, h6 {
+  color: #252b33;
+}
+.text-main {
+  color: #20c997;
+}
+.bg-main {
+  background-color: #20c997;
+}
+.title h2 {
+  letter-spacing: 0.2rem;
+  color: #ebeced;
+  line-height: 1rem;
+  font-size: 3rem !important;
+} 
+.title p {
+  font-size: 1.2rem;
+}
+/* #about .title h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border-bottom: 3px solid var(--main-color);
+  width: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+}  */
+.title span {
+  width: 60px;
+  height: 3px;
+  border-color: var(--main-color);
+  background-color: var(--main-color);
+}
+/* start navbar */
+.navbar .navbar-nav .nav-link {
+  color: white;
+  transition: var(--main-transition);
+  font-size: 1.5rem;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--main-color);
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 10%);
+}
+/* end navbar */
+/* start header  */
+header {
+  background-image: url(../image/intro-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 80%);
+}
+header .container {
+  z-index: 2;
+}
+.action::after {
+  content: " |";
+  animation-name: designer;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes designer {
+  10% {
+    content: "|";
+  }
+  20% {
+    content: " F|";
+  }
+  30% {
+    content: " Fr|";
+  }
+  40% {
+    content: " Free|";
+  }
+  50% {
+    content: " Freel|";
+  }
+  60% {
+    content: " Freela|";
+  }
+  70% {
+    content: " Freelan|";
+  }
+  80% {
+    content: " Freelanc|";
+  }
+  90% {
+    content: " Freelancer     |";
+  }
+  100% {
+    content: " Freelancer     |";
+  }
+}
+header .container .contant a:first-of-type {
+  padding: 1rem 2.5rem;
+  color: var(--main-color);
+  border: solid 3px var(--main-color);
+  transition: var(--main-transition);
+}
+header .container .contant a:first-of-type:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+header .container > a:first-of-type {
+  bottom: 5rem;
+  color: white;
+  animation-name: down;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+
+}
+@keyframes down {
+  0% {
+    bottom: 5rem;
+    opacity: 0;
+  }
+  100% {
+    bottom: 2rem;
+    opacity: 1;
+  }
+}
+header .container > a:last-of-type {
+  width: 4rem;
+  height: 4rem;
+  color: white;
+  background-color: darkgrey;
+}
+/* end header  */
+/* start about  */
+#about ul li:not(:last-child) {
+  border-bottom: 1px solid #eaeaea ;
+}
+  #about a {
+  padding: 0.5rem 2.5rem;
+    color: white;
+  border: solid 3px var(--main-color);
+    background-color: var(--main-color);
+}
+/* end about  */
+/* start services */
+#services .box {
+  padding-left: 6rem;
+}
+#services .icon {
+  width: 4rem;
+  height: 4rem;
+}
+/* end services */
+/* start Summary */
+#resume .progress-bar {
+  background-color: var(--main-color);
+}
+#resume .progress {
+  height: 0.7rem;
+}
+/* #resume .container > button {
+  padding: 1rem 2.5rem;
+} */
+/* end Summary */
+/* start portfolio */
+#portfolio .nav-pills .nav-link {
+  background-color: #dddddd;
+  color: #7b8084;
+  transition: var(--main-transition);
+  border-radius: 0px;
+  text-transform: capitalize;
+}
+#portfolio .nav-pills .nav-link.active {
+  border-bottom: 2px solid var(--main-color);
+  color: var(--main-color);
+}
+#portfolio .nav-pills .nav-link:hover {
+  color: var(--main-color);
+}
+#portfolio .image {
+  transition: var(--main-transition);
+}
+#portfolio .image  img{
+  transition: var(--main-transition);
+}
+#portfolio .image:hover  img{
+  transform: scale(1.1);
+  filter: blur(5px);
+}
+#portfolio .image .caption-overlaye {
+  opacity: 0;
+  transition: var(--main-transition);
+  background-color: rgba(0, 0, 0, 70%);
+}
+#portfolio .image:hover .caption-overlaye {
+  opacity: 1;
+}
+#portfolio .caption-overlaye span {
+  color: #dee3e4 ;
+}
+
+/* end portfolio */
+/* start client */
+  #client .items {
+    background-color: #dddddd;
+  }
+  #client .items  svg{
+    color: #ffc107;
+  }
+  #client .carousel-indicators [data-bs-target] {
+    width: 1rem;
+    height:1rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid transparent;
+    opacity: 1;
+    transition: var(--main-transition);
+  }
+  #client .carousel-indicators [data-bs-target] span {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #7b8084;
+    transition: var(--main-transition);
+  }
+  #client .carousel-indicators [data-bs-target]:hover {
+    border: 1px solid var(--main-color) !important;
+  }
+  #client .carousel-indicators [data-bs-target]:hover span {
+    background-color: var(--main-color);
+  }
+  #client .carousel-indicators [data-bs-target].active {
+    border: 1px solid var(--main-color);
+  }
+  #client .carousel-indicators [data-bs-target].active  span{
+    background-color: var(--main-color);
+  }
+/* end client */
+/* start contact  */
+#contact form button {
+  transform: var(--main-transition);
+  padding: 0.5rem 2.5rem !important;
+  border: solid 3px var(--main-color) !important;
+}
+#contact form button:hover {
+  background-color: #20c996;
+}
+/* end contact  */
+footer p a:hover  {
+  color: var(--main-color) !important;
+}
+footer ul a {
+  color: #4c4d4d !important;
+}
+footer ul a:hover {
+  color: var(--main-color) !important;
+}
+footer ul a:last-of-type::after {
+  content:  "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 2px;
+  height: calc( 100% - 1rem);
+  background-color: var(--main-color);
+}
+
